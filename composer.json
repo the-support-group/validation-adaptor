@@ -1,5 +1,5 @@
 {
-    "name": "the-support-group/validator-adaptor",
+    "name": "the-support-group/validation-adaptor",
     "type": "library",
     "description": "Open source PHP validation provider",
     "authors": [
