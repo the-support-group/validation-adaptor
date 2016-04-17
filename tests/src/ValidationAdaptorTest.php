@@ -27,4 +27,18 @@ class ValidatorAdaptorTest extends PHPUnit_Framework_TestCase
 
         $this->testObject->rule($ruleName, $arguments);
     }
+
+    /**
+     * Test that the validate method works as expected.
+     */
+    public function testValidate()
+    {
+        $this->markTestIncomplete('Needs implementing');
+
+        // Rule
+        $rule = '';
+        $value = '';
+
+        $this->testObject->validate($rule, $value);
+    }
 }

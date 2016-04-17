@@ -20,6 +20,15 @@ class ValidationAdaptor implements validationProviderInterface
      */
     public function rule($ruleName, array $arguments = [])
     {
-        $this->validator->rule($ruleName, $arguments);
+        return $this->validator->rule($ruleName, $arguments);
+    }
+
+    /**
+     * @param Rule $rule
+     * @param mixed $value
+     */
+    public function validate($rule, $value)
+    {
+        return $rule->validate($value);
     }
 }
