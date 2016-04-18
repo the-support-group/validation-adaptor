@@ -7,6 +7,16 @@ use TheSupportGroup\Common\ValidationInterop\ValidationProviderInterface;
 class ValidationAdaptor implements validationProviderInterface
 {
     /**
+     * Holds the rule name in operation.
+     */
+    private $ruleName;
+
+    /**
+     * Holds the arguments for the rule.
+     */
+    private $arguments;
+
+    /**
      * Set the validator object.
      */
     public function __construct($validator)
@@ -20,15 +30,24 @@ class ValidationAdaptor implements validationProviderInterface
      */
     public function rule($ruleName, array $arguments = [])
     {
-        return $this->validator->rule($ruleName, $arguments);
+        $this->ruleName = $ruleName;
+        $this->arguments = $arguments;
+
+        return $this;
     }
 
     /**
-     * @param Rule $rule
      * @param mixed $value
      */
-    public function validate($rule, $value)
+    public function validate($value)
     {
-        return $rule->validate($value);
+        $rule = $this->validator->rule($this->ruleName, $this->arguments);
+
+        // If validate returns a positive result it means all is well.
+        if ($rule->validate($value)) {
+            return true;
+        }
+
+        return false;
     }
 }
