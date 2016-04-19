@@ -30,7 +30,7 @@ class ValidationAdaptor implements validationProviderInterface
 
         // Import mapping only once.
         if (! self::$validatorMapping) {
-            self::$validatorMapping = require __DIR__ . '/../Mapping/Mapping.php';
+            self::$validatorMapping = require __DIR__ . '/Mapping/Mapping.php';
         }
     }
 
