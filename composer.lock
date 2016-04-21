@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9a206444ebc77c216132b6729201407b",
-    "content-hash": "cb85e4a2df15d5c2139d663c03e1bb2b",
+    "hash": "c48b5cdaff0fc3a4d8ed9914f62b1c8e",
+    "content-hash": "4712fe66a73a6adee32dbe2422bdd23b",
     "packages": [
         {
             "name": "the-support-group/validator-interop",
-            "version": "dev-master",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/the-support-group/validation-interop.git",
-                "reference": "9764efe083698d03c2e97b1bc480ed9001f37877"
+                "reference": "2ef91e8b6da3e1aca4803a558c8543e407977241"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/the-support-group/validation-interop/zipball/9764efe083698d03c2e97b1bc480ed9001f37877",
-                "reference": "9764efe083698d03c2e97b1bc480ed9001f37877",
+                "url": "https://api.github.com/repos/the-support-group/validation-interop/zipball/2ef91e8b6da3e1aca4803a558c8543e407977241",
+                "reference": "2ef91e8b6da3e1aca4803a558c8543e407977241",
                 "shasum": ""
             },
             "require": {
@@ -38,7 +38,7 @@
                 }
             ],
             "description": "PHP validation interface provider",
-            "time": "2016-04-18 14:19:24"
+            "time": "2016-04-19 13:13:47"
         }
     ],
     "packages-dev": [
@@ -1062,9 +1062,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "the-support-group/validator-interop": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -3,6 +3,7 @@
 namespace TheSupportGroup\Common\ValidationAdaptor;
 
 use TheSupportGroup\Common\ValidationInterop\ValidationProviderInterface;
+use Exception;
 
 class ValidationAdaptor implements validationProviderInterface
 {
