@@ -2,7 +2,6 @@
 
 namespace TheSupportGroup\Common\ValidationAdaptor;
 
-use TheSupportGroup\Common\ValidationInterop\ValidationProviderInterface;
 use Exception;
 
 class ValidationAdaptor implements validationProviderInterface
@@ -30,7 +29,7 @@ class ValidationAdaptor implements validationProviderInterface
         $this->validator = $validator;
 
         // Import mapping only once.
-        if (! self::$validatorMapping) {
+        if (!self::$validatorMapping) {
             self::$validatorMapping = require __DIR__ . '/Mapping/Mapping.php';
         }
     }
@@ -72,7 +71,7 @@ class ValidationAdaptor implements validationProviderInterface
     public function getMappedMethod($method)
     {
         // Check if the method called is provided in the mapping.
-        if (! array_key_exists($method, self::$validatorMapping)) {
+        if (!array_key_exists($method, self::$validatorMapping)) {
             throw new Exception(sprintf(
                 'Mapping for method "%s" not found, make sure it exists in the mapping file.',
                 $method
