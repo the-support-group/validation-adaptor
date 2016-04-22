@@ -18,6 +18,11 @@ class ValidationAdaptor implements validationProviderInterface
     private $arguments;
 
     /**
+     * Validator object.
+     */
+    private $validator;
+
+    /**
      * Validation mapping.
      */
     private static $validatorMapping = [];
